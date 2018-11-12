@@ -1,8 +1,5 @@
 package com.love;
 
-
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -10,20 +7,14 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-import static android.app.PendingIntent.getActivity;
 import static java.lang.StrictMath.abs;
 
 public class PuzzleActivity extends AppCompatActivity {
@@ -37,8 +28,6 @@ public class PuzzleActivity extends AppCompatActivity {
 
         final RelativeLayout layout = findViewById(R.id.layout);
         ImageView imageView = findViewById(R.id.imageView);
-        //Button back = (Button)findViewById(R.id.btn_back);
-        //back.setVisibility(View.INVISIBLE);
 
         // run image related code after the view was laid out
         // to have all dimensions calculated
@@ -152,19 +141,6 @@ public class PuzzleActivity extends AppCompatActivity {
         return ret;
     }
 
-    public void endpuzzle(){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
-    public void endpuzzle1(){
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            public void run() {
-                /*TextView txt = (TextView)findViewById(R.id.textView);
-                txt.setText(String.valueOf(isGameOver()));*/
-            }
-        },1000);
-    }
     public void checkGameOver() {
         if (isGameOver()) {
         }
