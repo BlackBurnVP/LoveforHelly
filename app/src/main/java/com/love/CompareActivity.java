@@ -48,7 +48,7 @@ public class CompareActivity extends AppCompatActivity {
 
     public void compare(View view){
 
-        final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_translate);
+        final Animation animTranslate = AnimationUtils.loadAnimation(this, R.anim.anim_compare);
         ImageButton img1 = (ImageButton)findViewById(R.id.imagebutton1);
         ImageButton img2 = (ImageButton)findViewById(R.id.imagebutton2);
         TextView txt = (TextView)findViewById(R.id.textView2);
